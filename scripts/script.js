@@ -1,4 +1,8 @@
 function menu(pagina) {
-    $("#conteudo").load("../componentes/" + pagina + ".html ");
-
+  $('#conteudo').slideUp(1000, ()=>{
+    $("#conteudo").load("../componentes/" + pagina + ".html ", ()=>{
+       $('#conteudo').slideDown(1000);
+    });
+  });
+ 
   }
